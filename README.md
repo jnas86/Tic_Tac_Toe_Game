@@ -1,8 +1,8 @@
 ## Table of contents
 * [Project Title](#project-title)
 * [Game rules](#game-rules)
-* [Technologies](#technologies)
 * [App info](#app-info)
+* [Technologies](#technologies)
 * [Setup](#setup)
 
 # Project Title
