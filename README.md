@@ -28,7 +28,10 @@ Project is created with:
 To run this project,you must have installed python version 3.6+.You can run the project from simple python console or import it in PyCharm.
 To run the project from the cmd console,first download the project, extract it to your desired directory and follow the commands:
 
+```
 $ cd ../path-to-main-py-file
+```
+```
 $ python main.py
-
+```
 Hope you enjoy it 🧡
