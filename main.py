@@ -65,36 +65,31 @@ game_is_draw = True
 current_player = player_1
 start_new_game = True
 
-while start_new_game:
-    # game loop
-    while game_is_finished is False:
-        choice = input(f"{current_player} make choice: ").upper()
-        try:
-            if choice not in dict_gameboard:
-                raise Exception("Invalid row/column letter choice")
+# game loop
+while game_is_finished is False:
+    choice = input(f"{current_player} make choice: ").upper()
+    try:
+        if choice not in dict_gameboard:
+            raise Exception("Invalid row/column letter choice")
+        else:
+            if dict_gameboard[choice] != " ":
+                raise Exception("Cell is not empty.Choose an empty cell to play")
             else:
-                if dict_gameboard[choice] != " ":
-                    raise Exception("Cell is not empty.Choose an empty cell to play")
+                dict_gameboard[choice] = f"{dict_symbols[current_player]}"
+                print_gameboard()
+                game_is_finished = scan_for_winner()
+                if " " not in dict_gameboard.values() and scan_for_winner() is False:
+                    game_is_finished = True
+                if game_is_finished:
+                    winner = current_player
+                    game_is_draw = False
+                if current_player == player_1:
+                    current_player = player_2
                 else:
-                    dict_gameboard[choice] = f"{dict_symbols[current_player]}"
-                    print_gameboard()
-                    game_is_finished = scan_for_winner()
-                    if " " not in dict_gameboard.values() and scan_for_winner() is False:
-                        game_is_finished = True
-                    if game_is_finished:
-                        winner = current_player
-                        game_is_draw = False
-                    if current_player == player_1:
-                        current_player = player_2
-                    else:
-                        current_player = player_1
-        except Exception as e:
-            print("Error: ", e)
-    if game_is_draw:
-        print("There is no winner")
-    else:
-        print(f"{winner} is the WINNER!!!")
-    next_game = input("Do you want to start a new game?If you want to terminate the application press 'exit'.In any "
-                      "other case the game restarts.").lower()
-    if next_game == 'exit':
-        start_new_game = False
+                    current_player = player_1
+    except Exception as e:
+        print("Error: ", e)
+if game_is_draw:
+    print("There is no winner")
+else:
+    print(f"{winner} is the WINNER!!!")
