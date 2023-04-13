@@ -1,5 +1,5 @@
 ## Table of contents
-* [Tic Tac Toe](#project-title)
+* [Tic Tac Toe](#tic-tac-toe)
 * [Game rules](#game-rules)
 * [App info](#app-info)
 * [Technologies](#technologies)
