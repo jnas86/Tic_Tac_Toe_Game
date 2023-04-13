@@ -1,11 +1,11 @@
 ## Table of contents
-* [Tic-Tac-Toe Python Console App](#project-title)
+* [Project Title](#project-title)
 * [Game rules](#game-rules)
 * [App info](#app-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
-# Tic-Tac-Toe Python Console App
+# Project Title
 Console game app of the famous Tic-Tac-Toe game, developed in python.
 
 ## Game rules
